@@ -16,9 +16,9 @@ int main() {
     float area1, area2, pib1, pib2; // Declaração de variáveis para armazenar a área e o PIB das cidades
     // O tamanho do array é 5, pois o código da carta tem 4 caracteres + 1 para o caractere nulo
 
-    float densidade_Populacional1;
+    float densidade_Populacional1, densidade_Populacional2;
 
-    float densidade_Populacional2;
+    float  PIB_per_Capita1, PIB_per_Capita2; // Declaração de variáveis para armazenar o PIB per capita das cidades
 
     int pontos_turisticos1, pontos_turisticos2; // Declaração de variáveis para armazenar o número de pontos turísticos das cidades
 
@@ -51,6 +51,8 @@ int main() {
 
     densidade_Populacional1 = (populacao1 / area1);
 
+    printf("PIB per cápita: %.2f\n", pib1 / populacao1); // Calcula e exibe o PIB per capita
+
     
 
     getchar(); // Limpa o buffer do teclado
@@ -82,6 +84,8 @@ int main() {
 
     densidade_Populacional2 = (populacao2 / area2);
 
+    printf("PIB per cápita: %.2f\n", pib2 / populacao2); // Calcula e exibe o PIB per capita
+
     printf("\n***<<<Cartas Cadastradas>>>***:\n"); // Exibe os dados das cartas cadastradas
     printf("\nCarta 1:\n"); // Exibe os dados da primeira carta
     printf("Estado: %c\n", estado1); // Exibe o estado da carta
@@ -92,6 +96,7 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib1); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1); // Exibe o número de pontos turísticos da cidade
     printf("A Densidade Populacional é : %.2f", densidade_Populacional1);
+    printf("Pib per Capita: %.2f\n", PIB_per_Capita1); // Exibe o PIB per capita da cidade
 
     printf("\nCarta 2:\n"); // Exibe os dados da segunda carta
     printf("Estado: %c\n", estado2); // Exibe o estado da carta
@@ -102,7 +107,7 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib2); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2); // Exibe o número de pontos turísticos da cidade
     printf("A Densidade Populacional é : %.2f", densidade_Populacional2);
-
+    printf("Pib per Capita: %.2f\n", PIB_per_Capita2); // Exibe o PIB per capita da cidade
     return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
     // O programa termina aqui
 }
