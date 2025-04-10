@@ -16,6 +16,10 @@ int main() {
     float area1, area2, pib1, pib2; // Declaração de variáveis para armazenar a área e o PIB das cidades
     // O tamanho do array é 5, pois o código da carta tem 4 caracteres + 1 para o caractere nulo
 
+    float densidade_Populacional1;
+
+    float densidade_Populacional2;
+
     int pontos_turisticos1, pontos_turisticos2; // Declaração de variáveis para armazenar o número de pontos turísticos das cidades
 
     printf("Cadastro da Carta 1:\n"); // Solicita os dados da primeira carta
@@ -29,9 +33,9 @@ int main() {
     getchar(); // Limpa o buffer do teclado
 
     printf("Nome da Cidade: "); // solicita o nome da cidade
+    scanf(" %15[^\n]", nome1); // Lê o nome da cidade, permitindo espaços e limitando a 15 caracteres
     fgets(nome1, sizeof(nome1), stdin); // Use fgets para ler strings com espaços e zerar o buffer e sizeif para evitar buffer overflow
     //Retorna o tamanho do array nome1 em bytes, ou seja, quantos caracteres ele pode armazenar, stdin é o buffer de entrada padrão
-
 
     printf("População: "); // solicita a população da cidade
     scanf(" %d", &populacao1); // Lê a população da cidade
@@ -45,6 +49,10 @@ int main() {
     printf("Número de Pontos Turísticos: "); // solicita o número de pontos turísticos da cidade
     scanf(" %d", &pontos_turisticos1); // Lê o número de pontos turísticos da cidade
 
+    densidade_Populacional1 = (populacao1 / area1);
+
+    
+
     getchar(); // Limpa o buffer do teclado
 
     printf("\nCadastro da Carta 2:\n"); // Solicita os dados da segunda carta
@@ -56,6 +64,7 @@ int main() {
     scanf(" %3s", codigo2); // Lê o código da carta
 
     printf("Nome da Cidade: "); // solicita o nome da cidade
+    scanf(" %15[^\n]", nome2); // Lê o nome da cidade, permitindo espaços e limitando a 15 caracteres
     fgets(nome2, sizeof(nome2),stdin); // Use fgets para ler strings com espaços e zerar o buffer e sizeif para evitar buffer overflow
     //Retorna o tamanho do array nome1 em bytes, ou seja, quantos caracteres ele pode armazenar, stdin é o buffer de entrada padrão
 
@@ -71,7 +80,9 @@ int main() {
     printf("Número de Pontos Turísticos: "); // solicita o número de pontos turísticos da cidade
     scanf(" %d", &pontos_turisticos2); // Lê o número de pontos turísticos da cidade
 
-    printf("\nCartas Cadastradas:\n"); // Exibe os dados das cartas cadastradas
+    densidade_Populacional2 = (populacao2 / area2);
+
+    printf("\n***<<<Cartas Cadastradas>>>***:\n"); // Exibe os dados das cartas cadastradas
     printf("\nCarta 1:\n"); // Exibe os dados da primeira carta
     printf("Estado: %c\n", estado1); // Exibe o estado da carta
     printf("Código: %s\n", codigo1); // Exibe o código da carta
@@ -80,6 +91,7 @@ int main() {
     printf("Área: %.2f km²\n", area1); // Exibe a área da cidade
     printf("PIB: %.2f bilhões de reais\n", pib1); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1); // Exibe o número de pontos turísticos da cidade
+    printf("A Densidade Populacional é : %.2f", densidade_Populacional1);
 
     printf("\nCarta 2:\n"); // Exibe os dados da segunda carta
     printf("Estado: %c\n", estado2); // Exibe o estado da carta
@@ -89,6 +101,7 @@ int main() {
     printf("Área: %.2f km²\n", area2); // Exibe a área da cidade
     printf("PIB: %.2f bilhões de reais\n", pib2); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2); // Exibe o número de pontos turísticos da cidade
+    printf("A Densidade Populacional é : %.2f", densidade_Populacional2);
 
     return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
     // O programa termina aqui
