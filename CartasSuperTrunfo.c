@@ -95,8 +95,8 @@ int main() {
     printf("Área: %.2f km²\n", area1); // Exibe a área da cidade
     printf("PIB: %.2f bilhões de reais\n", pib1); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1); // Exibe o número de pontos turísticos da cidade
-    printf("A Densidade Populacional é : %.2f", densidade_Populacional1);
-    printf("Pib per Capita: %.2f\n", PIB_per_Capita1); // Exibe o PIB per capita da cidade
+    printf("A Densidade Populacional é : %.2f\n", densidade_Populacional1);
+    printf("Pib per Capita: %f\n", PIB_per_Capita1); // Exibe o PIB per capita da cidade
 
     printf("\nCarta 2:\n"); // Exibe os dados da segunda carta
     printf("Estado: %c\n", estado2); // Exibe o estado da carta
@@ -106,8 +106,8 @@ int main() {
     printf("Área: %.2f km²\n", area2); // Exibe a área da cidade
     printf("PIB: %.2f bilhões de reais\n", pib2); // Exibe o PIB da cidade
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2); // Exibe o número de pontos turísticos da cidade
-    printf("A Densidade Populacional é : %.2f", densidade_Populacional2);
-    printf("Pib per Capita: %.2f\n", PIB_per_Capita2); // Exibe o PIB per capita da cidade
+    printf("A Densidade Populacional é : %.2f\n", densidade_Populacional2);
+    printf("Pib per Capita: %f\n", PIB_per_Capita2); // Exibe o PIB per capita da cidade
     return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
     // O programa termina aqui
 }
